@@ -2,11 +2,11 @@ import psycopg2
 
 def main():
     
-    conn = psycopg2.connect("dbname=test user=test")
+    conn = psycopg2.connect("dbname=gamerhelper user=test")
     cur = conn.cursor()
-    cur.execute("SELECT * from data")
+    cur.execute("SELECT * from games")
     records = cur.fetchall()
     
-    print("Start of the Journey!")
+    print(records)
     
 main()
